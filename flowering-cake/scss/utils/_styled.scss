@@ -1,0 +1,14 @@
+
+
+$border-gray: 1px solid gray;
+$width-one: min(100% - 20px, 700px);
+
+
+
+
+
+@mixin width($from, $padding, $upto){
+    width:min($from - $padding, $upto);
+    margin-inline:auto;
+}
+

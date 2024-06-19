@@ -1,0 +1,66 @@
+@use "../utils" as util;
+@use "../globals" as global;
+
+
+.featured {
+   
+  
+    height: auto;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 50px;
+    padding-block: 50px;
+  
+   
+
+    h2{
+
+        margin-bottom: 80px;
+    }
+    &__content {
+      margin-top: 2rem;
+      width: 90%;
+      display: grid;
+      gap: 3px;
+      grid-template-columns: repeat(3, 1fr);
+      place-content: center;
+      place-self: center;
+      text-align: center;
+    }
+  
+    img {
+      max-width: 400px;
+      width: 80%;
+    }
+  
+
+    .featured__cakes{
+
+        &:hover{
+            margin-top: -40px;
+        }
+    }
+
+    .lemon {
+      border: 2px solid yellow;
+      padding-bottom: 1rem;
+      background-color: yellow;
+  
+    }
+  
+      .apricot {
+        @extend .lemon;
+        border-color: pink;
+        background-color: pink;
+      }
+
+      .chocolate {
+        @extend .lemon;
+        border-color: rgb(28, 7, 7);
+        background-color: rgb(28, 7, 7);
+        color: white;
+      }
+    }
+  
